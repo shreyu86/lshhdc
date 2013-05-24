@@ -1,39 +1,40 @@
-import itertools
+import math
 
-from math import sqrt
+import lshhdc.utils
+import lshhdc.signature
 
-from utils import *
-from ..lsh import MinHashSignature, jaccard_sim
 
 def test_signature_length():
     """Signatures should have correct dimension"""
     dim = 100
-    mh = MinHashSignature(dim)
-    assert dim == len(mh.sign(randset()))
+    mh = lshhdc.signature.MinHashSignature(dim)
+    assert dim == len(mh.sign(lshhdc.utils.randset()))
+
 
 def test_consistent_signature():
     """Signatures should be consistent"""
-    mh = MinHashSignature(100)
-    s = randset()
+    mh = lshhdc.signature.MinHashSignature(100)
+    s = lshhdc.utils.randset()
     assert mh.sign(s) == mh.sign(s)
+
 
 def test_signature_similarity():
     """The probability that two sets' signatures match at some index
     are equal is equal to the Jaccard similarity between the two"""
     dim = 100
     n_tests = 100
-    expected_error = 1 / sqrt(dim) # Expected error is O(1/sqrt(dim))
-    mh = MinHashSignature(dim)
+    expected_error = 1 / math.sqrt(dim) # Expected error is O(1/sqrt(dim))
+    mh = lshhdc.signature.MinHashSignature(dim)
     err = 0.0
 
     for test in range(n_tests):
         # Create random sets and their signatures
-        sets = (randset(), randset())
+        sets = (lshhdc.utils.randset(), lshhdc.utils.randset())
         sigs = map(mh.sign, sets)
 
         # Calculate true jaccard similarity, and sim of signatures
-        jsim = jaccard_sim(*sets)
-        ssim = sigsim(*sigs, dim=dim)
+        jsim = lshhdc.utils.jaccard_sim(*sets)
+        ssim = lshhdc.utils.sigsim(*sigs, dim=dim)
 
         # Accumulate error
         err += abs(jsim - ssim)
