@@ -1,0 +1,12 @@
+www.gap.com, Gap
+m.gap.com, Gap
+www.gap.ca, Gap Canada
+www.piperlime.gap.com, Piperlime
+www.piperlime.com, Piperlime
+www.athleta.com, Athleta
+www.athleta.gap.com, Athleta
+www.secure-athleta.com, Athleta
+www.norton.com, Symantec
+www.norton.com, Norton
+www.notron.ca, Norton
+www.buy.symantec.com, Symantec

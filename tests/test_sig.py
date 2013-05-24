@@ -21,6 +21,7 @@ def test_consistent_signature():
 def test_signature_similarity():
     """The probability that two sets' signatures match at some index
     are equal is equal to the Jaccard similarity between the two"""
+
     dim = 100
     n_tests = 100
     expected_error = 1 / math.sqrt(dim) # Expected error is O(1/sqrt(dim))

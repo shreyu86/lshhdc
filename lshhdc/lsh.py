@@ -3,10 +3,6 @@ lsh.py
 
 Algorithms based on 'Mining of Massive Datasets'
 """
-import lshhdc.signature
-import lshhdc.unionfind
-
-
 class LSH:
     """Locality sensitive hashing.  Uses a banding approach to hash
     similar signatures to the same buckets."""

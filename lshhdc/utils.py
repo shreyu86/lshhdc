@@ -23,9 +23,18 @@ def sigsim(X, Y, dim):
 
 def shingle(s, k):
     """Generate k-length shingles of string s"""
-    k = min(len(s), k)
+    shingle_set = set()
+
+    if len(s) < k:
+        return []
+
     for i in range(len(s) - k + 1):
-        yield s[i:i + k]
+        temp_shingle = s[i:i + k]
+
+        shingle_set.add(temp_shingle)
+
+    # print shingle_set
+    return shingle_set
 
 
 def hshingle(s, k):
