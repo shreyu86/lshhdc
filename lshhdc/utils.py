@@ -3,8 +3,8 @@ utils.py
 
 Testing utilities
 """
-import random
 import operator
+import random
 
 
 def randset():

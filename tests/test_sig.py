@@ -1,7 +1,7 @@
 import math
 
-import lshhdc.utils
 import lshhdc.signature
+import lshhdc.utils
 
 
 def test_signature_length():
@@ -24,7 +24,7 @@ def test_signature_similarity():
 
     dim = 100
     n_tests = 100
-    expected_error = 1 / math.sqrt(dim) # Expected error is O(1/sqrt(dim))
+    expected_error = 1 / math.sqrt(dim)  # Expected error is O(1/sqrt(dim))
     mh = lshhdc.signature.MinHashSignature(dim)
     err = 0.0
 

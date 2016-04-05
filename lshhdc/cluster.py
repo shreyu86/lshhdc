@@ -1,6 +1,6 @@
-import lshhdc.unionfind
-import lshhdc.signature
 import lshhdc.lsh
+import lshhdc.signature
+import lshhdc.unionfind
 
 
 class Cluster:

@@ -1,6 +1,6 @@
+import lshhdc.cluster
 import lshhdc.lsh
 import lshhdc.utils
-import lshhdc.cluster
 
 
 def test_same_set():

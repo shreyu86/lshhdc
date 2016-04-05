@@ -3,6 +3,8 @@ lsh.py
 
 Algorithms based on 'Mining of Massive Datasets'
 """
+
+
 class LSH:
     """Locality sensitive hashing.  Uses a banding approach to hash
     similar signatures to the same buckets."""
@@ -19,8 +21,8 @@ class LSH:
 
     def get_bandwidth(self, n, t):
         """Approximates the bandwidth (number of rows in each band)
-        needed to get threshold.  
-        
+        needed to get threshold.
+
         Threshold t = (1/b) ** (1/r) where
         b = #bands
         r = #rows per band
